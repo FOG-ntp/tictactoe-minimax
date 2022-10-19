@@ -141,7 +141,7 @@ As we can see in the picture above, the current state of the game is on player X
 Now in turn 1, MAX can go 1 of 3 moves as shown. So how to choose 1 of the 3 countries which is the best to go. We rely on the value of each country to choose the best country, as here those 3 nodes belong to the MAX class, so choose the largest value. We start finding the value of each of those nodes. 
 In the MAX layer in turn 1, we have nodes 1,2,3 numbered from left to right as shown. Our node 3 is already a leaf node (X win game ) and has a value of +10. And 2 nodes 1,2, do not know its value at turn 1, so we rely on the value of the child nodes to determine the value and equal to the minimum value of the child nodes in the MIN layer at turn 2. So on Continue like this until we meet a leaf node, then from that leaf node we infer and we calculate that node 1 has a value of -10 and node 2 is 0. So the best move here is like node 3 has a value of -10. maximum value is +10.
 
-## ▷ Author(s): F.O.G_ntp(nguyenthanhphong)
+## ▷ Author: F.O.G_ntp(nguyenthanhphong)
 
 
 
