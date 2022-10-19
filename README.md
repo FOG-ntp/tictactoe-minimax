@@ -136,7 +136,10 @@ public void mousePressed(MouseEvent e) {
 This image depicts all the possible paths that the game can take from the root board state. It is often called the Game Tree. 
 
 As we can see in the picture above, the current state of the game is on player X's turn to represent MAX. We temporarily set the value of MAX when the game wins for X = +10 and MIN when the game loses for X = -10 and when the game is drawn = 0.
+
+
 ![pic2](https://user-images.githubusercontent.com/99815527/196594390-b11157dc-f1b4-4ac0-bb4d-b8d68c41644e.png)
+
 
 Now in turn 1, MAX can go 1 of 3 moves as shown. So how to choose 1 of the 3 countries which is the best to go. We rely on the value of each country to choose the best country, as here those 3 nodes belong to the MAX class, so choose the largest value. We start finding the value of each of those nodes. 
 In the MAX layer in turn 1, we have nodes 1,2,3 numbered from left to right as shown. Our node 3 is already a leaf node (X win game ) and has a value of +10. And 2 nodes 1,2, do not know its value at turn 1, so we rely on the value of the child nodes to determine the value and equal to the minimum value of the child nodes in the MIN layer at turn 2. So on Continue like this until we meet a leaf node, then from that leaf node we infer and we calculate that node 1 has a value of -10 and node 2 is 0. So the best move here is like node 3 has a value of -10. maximum value is +10.
