@@ -1,4 +1,5 @@
-## Tic-Tac-Toe-MinimaxAlgorithm
+## Tic-Tac-Toe-MinimaxAlgorithm ⭕❕❌
+
  An implementation of Minimax AI Algorithm on Tic-Tac-Toe (or Noughts and Crosses) game. Try it: Tic-tac-toe - Minimax.
  <p align="center">
  <img width="204" alt="image" src="https://user-images.githubusercontent.com/99815527/196594672-b102fa7a-a4f7-400b-b5d6-dd10d55b406a.png">
@@ -7,10 +8,10 @@
 
  </p>
  
-### What is Minimax?
+### ▷ What is Minimax?
 Minimax is a artificial intelligence applied in two player games, such as tic-tac-toe, checkers, chess and go. This games are known as zero-sum games, because in a mathematical representation: one player wins (+1) and other player loses (-1) or both of anyone not to win (0).
 
-### How does it works?
+### ▷ How does it works?
 The algorithm search, recursively, the best move that leads the *Max* player to win or not lose (draw). It consider the current state of the game and the available moves at that state, then for each valid move it plays (alternating *min* and *max*) until it finds a terminal state (win, draw or lose).
 ## Finding the bestMove: 
 We shall be introducing a new function called bestMove(). This function evaluates all the available moves using minimax() and then returns the best move the maximizer can make. The pseudocode is as follows : 
@@ -36,7 +37,7 @@ public Move bestMove(int[][] arr,boolean turn ){
         return result;
     }
 ```
-### Minimax:
+### ▷ Minimax:
 To check whether or not the current move is better than the best move we take the help of minimax() function which will consider all the possible ways the game can go and returns the best value for that move, assuming the opponent also plays optimally 
 
 The code for the maximizer and minimizer in the minimax() function is similar to findBestMove(), the only difference is, instead of returning a move, it will return a value. Here is the pseudocode :  
@@ -75,7 +76,7 @@ public int minimax(int[][] arr, boolean isTurn){
         }
     }
 ```
-### Checking for GameOver state:
+### ▷ Checking for GameOver state:
 To check whether the game is over and to make sure there are no moves left we use checkMove() function. It is a simple straightforward function which checks whether a move is available or not and returns true or false respectively. Pseudocode is as follows :
 ```
  public boolean checkMove(int[][] arr){
@@ -89,7 +90,7 @@ To check whether the game is over and to make sure there are no moves left we us
          return false;
     }
 ```
-### Implements MouseListener:
+### ▷ Implements MouseListener:
 ```
 public void mousePressed(MouseEvent e) {
             for (int i = 0; i < arBT.length; i++) {
@@ -130,7 +131,7 @@ public void mousePressed(MouseEvent e) {
             }
         }
 ```
-### Explanation :
+### ▷ Explanation :
 ![4db4c04a-890f-405c-9399-6e1dd0448a18](https://user-images.githubusercontent.com/99815527/196593617-888c0884-e14f-4f07-8e31-a165ec3bc003.png) 
 
 This image depicts all the possible paths that the game can take from the root board state. It is often called the Game Tree. 
@@ -144,7 +145,7 @@ As we can see in the picture above, the current state of the game is on player X
 Now in turn 1, MAX can go 1 of 3 moves as shown. So how to choose 1 of the 3 countries which is the best to go. We rely on the value of each country to choose the best country, as here those 3 nodes belong to the MAX class, so choose the largest value. We start finding the value of each of those nodes. 
 In the MAX layer in turn 1, we have nodes 1,2,3 numbered from left to right as shown. Our node 3 is already a leaf node (X win game ) and has a value of +10. And 2 nodes 1,2, do not know its value at turn 1, so we rely on the value of the child nodes to determine the value and equal to the minimum value of the child nodes in the MIN layer at turn 2. So on Continue like this until we meet a leaf node, then from that leaf node we infer and we calculate that node 1 has a value of -10 and node 2 is 0. So the best move here is like node 3 has a value of -10. maximum value is +10.
 
-### Author: F.O.G_ntp(nguyenthanhphong)
+### ▷ Author: F.O.G_ntp(nguyenthanhphong)
 
 
 
